@@ -24,6 +24,7 @@
         if (top_block)
         {
             let ch2 = top_block.childNodes;
+            if (ch2[1]) ch2[1].style.display = 'none';
             if (ch2[2]) ch2[2].style.display = 'none';
         }
     }
