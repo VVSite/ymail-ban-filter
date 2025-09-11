@@ -7,8 +7,8 @@
 // @match        https://mail.yandex.ru/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=yandex.ru
 // @homepageURL    https://github.com/VVSite/ymail-ban-filter/
-// @updateURL      https://github.com/VVSite/ymail-ban-filter/ym-ban-filt.js
-// @downloadURL    https://github.com/VVSite/ymail-ban-filter/ym-ban-filt.js
+// @updateURL      https://github.com/VVSite/ymail-ban-filter/blob/main/ym-ban-flt.js
+// @downloadURL    https://github.com/VVSite/ymail-ban-filter/blob/main/ym-ban-flt.js
 // @grant        none
 // ==/UserScript==
 
