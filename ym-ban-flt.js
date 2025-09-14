@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Yandex Mail Banner Filter
 // @namespace    http://tampermonkey.net/
-// @version      2025-09-11
+// @version      2025-09-14
 // @description  Filter banners for YMail
 // @author       VVSite
 // @match        https://mail.yandex.ru/*
@@ -24,8 +24,8 @@
         if (top_block)
         {
             let ch2 = top_block.childNodes;
-            if (ch2[1]) ch2[1].style.display = 'none';
-            if (ch2[2]) ch2[2].style.display = 'none';
+            if (ch2[1] && !ch2[1].hasAttribute('data-react-focus-root')) ch2[1].style.display = 'none';
+            if (ch2[2] && !ch2[2].hasAttribute('data-react-focus-root')) ch2[2].style.display = 'none';
         }
     }
 
