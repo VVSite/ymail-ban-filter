@@ -20,13 +20,20 @@
         var right_block_arr = ['div[data-testid="page-layout_right-column_container"]', 'div[data-testid="page-layout_right-column_container_v1"]'];
         let right_block = null;
         right_block_arr.forEach(function(v, k){
-            let right_block = document.querySelector(v);
+            right_block = document.querySelector(v);
             if (right_block) return true;
         });
 
         if (right_block) right_block.remove();
 
-        let top_block = document.querySelector('div#js-mail-layout-content-header');
+        //
+        var top_block_arr =['div#js-mail-layout-content-header', 'div#js-mail-layout-content-header-v1'];
+        let top_block = null;
+        top_block_arr.forEach(function(v, k){
+            top_block = document.querySelector(v);
+            if (top_block) return true;
+        });
+
         if (top_block)
         {
             let ch2 = top_block.childNodes;
