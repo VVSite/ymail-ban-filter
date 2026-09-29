@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Yandex Mail Banner Filter
 // @namespace    http://tampermonkey.net/
-// @version      2026-08-24
+// @version      2026-09-29
 // @description  Filter banners for YMail
 // @author       VVSite
 // @match        https://mail.yandex.ru/*
@@ -25,6 +25,14 @@
         });
 
         if (right_block) right_block.children[1].remove();
+
+        var new_right_block = '[class^="PageLayout-m__body"]';
+        right_block = document.querySelector(new_right_block);
+        if (right_block)
+        {
+            const third = right_block.childNodes[2];
+            if (third) third.remove();
+        }
 
         //
         var top_block_arr =['div#js-mail-layout-content-header', 'div#js-mail-layout-content-header-v1'];
